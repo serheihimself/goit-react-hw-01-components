@@ -1,16 +1,15 @@
+import Profile from "./Profile";
+import userProfile from ""
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <div>{
+      userProfile.map(el=><div>
+        <Profile 
+        username={el.username}
+        tag={el.tag}
+        location={el.location}
+        avatar={el.avatar}
+         />
+        </div>)}</div>
   );
 };
