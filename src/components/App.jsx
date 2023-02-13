@@ -7,6 +7,7 @@ export function App () {
     tag={userProfile.tag}
     location={userProfile.location}
     avatar={userProfile.avatar}
+    stats={userProfile.stats}
      />}</div>
 
     }
