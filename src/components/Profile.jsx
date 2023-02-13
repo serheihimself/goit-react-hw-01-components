@@ -3,10 +3,10 @@ import PropTypes  from "prop-types"
 function Profile({username, tag, location, avatar, stats}){
     return <div className="profile">
         <div className="description">
-            <img src= {avatar} alt={username} className="avatar" />
-            <p username={username} className="name">Petra Marica</p>
-            <p tag={tag} className="tag">@pmarica</p>
-            <p location={location} className="location">Salvador, Brasil</p>
+            <img src= {avatar} alt={username} className="avatar" width="120"/>
+            <p className="name">{username}</p>
+            <p className="tag">{tag}</p>
+            <p className="location">{location}</p>
         </div>
         <ul className="stats">
             <li>

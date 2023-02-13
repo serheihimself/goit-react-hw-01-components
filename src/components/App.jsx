@@ -1,15 +1,12 @@
 import Profile from "./Profile";
-import userProfile from ""
-export const App = () => {
-  return (
-    <div>{
-      userProfile.map(el=><div>
-        <Profile 
-        username={el.username}
-        tag={el.tag}
-        location={el.location}
-        avatar={el.avatar}
-         />
-        </div>)}</div>
-  );
-};
+import userProfile from "../external_datafiles/user.json"
+export function App () {
+  return <div>
+    {<Profile 
+    username={userProfile.username}
+    tag={userProfile.tag}
+    location={userProfile.location}
+    avatar={userProfile.avatar}
+     />}</div>
+
+    }
