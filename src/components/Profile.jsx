@@ -1,32 +1,37 @@
 import PropTypes from "prop-types"
 import { Card } from "./Profile.styles"
 import { CardProfile } from "./Profile.styles"
+import { CardDescription } from "./Profile.styles"
+import { TitleProfile } from "./Profile.styles"
+import { TagProfile } from "./Profile.styles"
+import { LocationProfile } from "./Profile.styles"
+import { ListProfile } from "./Profile.styles"
+import { BoxList } from "./Profile.styles"
+
 function Profile({username, tag, location, avatar, stats}){
     return <Card>
-    <div className="profile">
     <CardProfile>
-        <div className="description">
-            <img src= {avatar} alt={username} className="avatar" width="120"/>
-            <p className="name">{username}</p>
-            <p className="tag">{tag}</p>
-            <p className="location">{location}</p>
-        </div>
-        <ul className="stats">
-            <li>
-                <span className="label">Followers</span>
-                <span className="quantity">{stats.followers}</span>
-            </li>
-            <li>
-                <span className="label">Views</span>
-                <span className="quantity">{stats.views}</span>
-            </li>
-            <li>
-                <span className="label">Likes</span>
-                <span className="quantity">{stats.likes}</span>
-            </li>
-        </ul>
-        </CardProfile>
-    </div>
+        <CardDescription>
+            <img style={{borderRadius: "50%", marginBottom: "30px", alignItems: "center"}} src= {avatar} alt={username} className="avatar" width="150" height="150"/>
+            <TitleProfile>{username}</TitleProfile>
+            <TagProfile>{tag}</TagProfile>
+            <LocationProfile>{location}</LocationProfile>
+        </CardDescription>
+        <ListProfile>
+            <BoxList>
+                <span style={{color: "grey", fontWeight: "500" }} className="label">Followers</span>
+                <span style={{color: "black", fontWeight: "900" }} className="quantity">{stats.followers}</span>
+            </BoxList>
+            <BoxList>
+                <span style={{color: "grey", fontWeight: "500" }} className="label">Views</span>
+                <span style={{color: "black", fontWeight: "900" }} className="quantity">{stats.views}</span>
+            </BoxList>
+            <BoxList>
+                <span style={{color: "grey", fontWeight: "500" }} className="label">Likes</span>
+                <span style={{color: "black", fontWeight: "900" }} className="quantity">{stats.likes}</span>
+            </BoxList>
+        </ListProfile>
+    </CardProfile>
     </Card>
 }
 

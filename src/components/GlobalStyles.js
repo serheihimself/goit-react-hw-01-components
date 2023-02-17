@@ -5,6 +5,6 @@ export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     font-family: 'Sofia Sans Semi Condensed', sans-serif;
-    background: #778899;
+    background: #E6E6FA	;
   }
 `
