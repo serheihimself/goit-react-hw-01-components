@@ -1,3 +1,4 @@
+import { GlobalStyle } from "./GlobalStyles";
 import Profile from "./Profile";
 import userProfile from "../external_datafiles/user.json"
 export function App () {
@@ -8,6 +9,7 @@ export function App () {
     location={userProfile.location}
     avatar={userProfile.avatar}
     stats={userProfile.stats}
-     />}</div>
+     />}
+     <GlobalStyle /></div>
 
     }

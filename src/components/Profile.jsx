@@ -1,6 +1,10 @@
-import propType from "prop-types"
+import PropTypes from "prop-types"
+import { Card } from "./Profile.styles"
+import { CardProfile } from "./Profile.styles"
 function Profile({username, tag, location, avatar, stats}){
-    return <div className="profile">
+    return <Card>
+    <div className="profile">
+    <CardProfile>
         <div className="description">
             <img src= {avatar} alt={username} className="avatar" width="120"/>
             <p className="name">{username}</p>
@@ -21,15 +25,21 @@ function Profile({username, tag, location, avatar, stats}){
                 <span className="quantity">{stats.likes}</span>
             </li>
         </ul>
+        </CardProfile>
     </div>
+    </Card>
 }
 
-Profile.propType = {
-    username: propType.string,
-    tag: propType.string,
-    location:propType.string,
-    avatar: propType.string,
-    stats: propType.number
+Profile.propTypes = {
+    username: PropTypes.string,
+    tag: PropTypes.string,
+    location:PropTypes.string,
+    avatar: PropTypes.string,
+    stats: PropTypes.shape({
+        followers: PropTypes.number,
+        views: PropTypes.number,
+        likes: PropTypes.number
+    })
 }
 
 export default Profile
