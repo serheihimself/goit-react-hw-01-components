@@ -3,6 +3,8 @@ import Profile from './Profile';
 import Statistics from './Statistics';
 import userProfile from '../external_datafiles/user.json';
 import dataStats from '../external_datafiles/data.json';
+import FriendList from '../components/FriendList';
+import friendData from '../external_datafiles/friends.json';
 export function App() {
   return (
     <div>
@@ -16,11 +18,8 @@ export function App() {
           stats={userProfile.stats}
         />
       }
-      {dataStats.map(el => (
-        <div key={el.id}>
-          <Statistics label={el.label} value={el.percentage} />
-        </div>
-      ))}
+      {<Statistics title="UPLOAD STATS" stats={dataStats} />}
+      {<FriendList friends={friendData} />}
     </div>
   );
 }
