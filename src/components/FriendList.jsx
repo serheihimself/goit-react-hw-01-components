@@ -16,7 +16,7 @@ function FriendList({ friends }) {
         {friends.map(el => (
           <ListFriends key={el.id}>
             {el.isOnline ? <OnOnlineStatus /> : <OffOnlineStatus />}
-            <img src={el.avatar} alt={el.name} width="48" />
+            <img src={el.avatar ?? defaultImg} alt={el.name} width="48" />
             <FriendName>{el.name}</FriendName>
           </ListFriends>
         ))}
@@ -24,5 +24,11 @@ function FriendList({ friends }) {
     </BoxFriends>
   );
 }
+FriendList.propTypes = {
+  name: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  isOnline: PropTypes.bool.isRequired,
+  id: PropTypes.number.isRequired,
+};
 
 export default FriendList;
