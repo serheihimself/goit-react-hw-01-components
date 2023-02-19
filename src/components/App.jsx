@@ -6,6 +6,7 @@ import dataStats from '../external_datafiles/data.json';
 export function App() {
   return (
     <div>
+      <GlobalStyle />
       {
         <Profile
           username={userProfile.username}
@@ -15,7 +16,11 @@ export function App() {
           stats={userProfile.stats}
         />
       }
-      <GlobalStyle />
+      {dataStats.map(el => (
+        <div key={el.id}>
+          <Statistics label={el.label} value={el.percentage} />
+        </div>
+      ))}
     </div>
   );
 }
