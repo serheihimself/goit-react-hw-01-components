@@ -5,6 +5,9 @@ import userProfile from '../external_datafiles/user.json';
 import dataStats from '../external_datafiles/data.json';
 import FriendList from '../components/FriendList';
 import friendData from '../external_datafiles/friends.json';
+import TransactionHistory from './TransactionHistory';
+import transactionData from '../external_datafiles/transactions.json';
+
 export function App() {
   return (
     <div>
@@ -20,6 +23,7 @@ export function App() {
       }
       {<Statistics title="UPLOAD STATS" stats={dataStats} />}
       {<FriendList friends={friendData} />}
+      {<TransactionHistory items={transactionData} />}
     </div>
   );
 }
