@@ -9,6 +9,7 @@ export const StatisticBox = styled.div`
   align-items: center;
   border-radius: 10px;
   background: #ffffff;
+  margin-bottom: 32px;
 `;
 
 export const UlStats = styled.ul`
