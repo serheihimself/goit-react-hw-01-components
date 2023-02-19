@@ -9,8 +9,10 @@ export const BoxFriends = styled.div`
   background: #ffffff;
   border-radius: 10px;
   margin-bottom: 32px;
+  padding: 6px;
 `;
 export const UlFriends = styled.ul`
+  width: 100%;
   list-style: none;
   display: flex;
   flex-direction: column;
