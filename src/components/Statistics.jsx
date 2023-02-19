@@ -31,4 +31,9 @@ function Statistics({ label, value }) {
   );
 }
 
+Statistics.propTypes = {
+  label: PropTypes.string,
+  value: PropTypes.number,
+};
+
 export default Statistics;
