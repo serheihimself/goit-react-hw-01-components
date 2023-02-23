@@ -13,7 +13,7 @@ export const MainTitle = styled.th`
   font-size: 20px;
 `;
 export const Tr = styled.tr`
-  textalign: center;
+  text-align: center;
   font-size: 18px;
 `;
 export const Td = styled.td`
