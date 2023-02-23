@@ -12,3 +12,10 @@ export const MainTitle = styled.th`
   background: #f0f8ff;
   font-size: 20px;
 `;
+export const Tr = styled.tr`
+  textalign: center;
+  font-size: 18px;
+`;
+export const Td = styled.td`
+  padding: 10px;
+`;

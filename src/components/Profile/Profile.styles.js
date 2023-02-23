@@ -24,6 +24,12 @@ export const CardDescription = styled.div`
   padding-top: 32px;
   padding-bottom: 32px;
 `;
+export const ImgProfile = styled.img`
+  border-radius: 50%;
+  margin-bottom: 30px;
+  width: 150px;
+  height: 150px;
+`;
 
 export const TitleProfile = styled.p`
   font-weight: 700;
@@ -66,4 +72,12 @@ export const BoxList = styled.li`
   align-items: center;
   padding: 20px;
   row-gap: 5px;
+`;
+export const SpanTitle = styled.span`
+  color: grey, 
+  font-weight: 500;
+  `;
+export const SpanValue = styled.span`
+  color: black;
+  font-weight: 900;
 `;

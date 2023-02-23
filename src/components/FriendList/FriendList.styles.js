@@ -29,19 +29,12 @@ export const ListFriends = styled.li`
   background: #f0f8ff;
   border-radius: 10px;
 `;
-export const OnOnlineStatus = styled.span`
-  background: green;
+export const Status = styled.span`
   width: 20px;
   height: 20px;
   border-radius: 50%;
   margin-right: 20px;
-`;
-export const OffOnlineStatus = styled.span`
-  background: red;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  margin-right: 20px;
+  background: ${props => (props.isOnline ? 'green' : 'red')};
 `;
 export const FriendName = styled.p`
   margin-left: 16px;

@@ -10,6 +10,7 @@ export const StatisticBox = styled.div`
   border-radius: 10px;
   background: #ffffff;
   margin-bottom: 32px;
+  overflow: hidden;
 `;
 
 export const UlStats = styled.ul`
@@ -28,4 +29,9 @@ export const ListStats = styled.li`
   padding: 10px;
   width: 100%;
   height: 100%;
+  background: #f0f8ff;
+`;
+export const ListDescription = styled.p`
+  font-size: 24px;
+  font-weight: 900;
 `;

@@ -1,24 +1,18 @@
 import PropTypes from 'prop-types';
-import defaultImg from '../external_datafiles/defaultImg.png';
-import {
-  UlFriends,
-  BoxFriends,
-  ListFriends,
-  OnOnlineStatus,
-  OffOnlineStatus,
-  FriendName,
-} from '../components/FriendList.styles';
+import FriendListItem from './FriendListItem';
+import { UlFriends, BoxFriends } from './FriendList.styles';
 
 function FriendList({ friends }) {
   return (
     <BoxFriends>
       <UlFriends>
         {friends.map(el => (
-          <ListFriends key={el.id}>
-            {el.isOnline ? <OnOnlineStatus /> : <OffOnlineStatus />}
-            <img src={el.avatar ?? defaultImg} alt={el.name} width="48" />
-            <FriendName>{el.name}</FriendName>
-          </ListFriends>
+          <FriendListItem
+            avatar={el.avatar}
+            name={el.name}
+            isOnline={el.isOnline}
+            key={el.id}
+          />
         ))}
       </UlFriends>
     </BoxFriends>
@@ -32,7 +26,7 @@ FriendList.propTypes = {
       isOnline: PropTypes.bool.isRequired,
       id: PropTypes.number.isRequired,
     })
-  ),
+  ).isRequired,
 };
 
 export default FriendList;

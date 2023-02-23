@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { BoxTable, MainTitle } from './TransactionHistory.styles';
+import { BoxTable, MainTitle, Tr, Td } from './TransactionHistory.styles';
 
 function TransactionHistory({ items }) {
   return (
@@ -13,11 +13,11 @@ function TransactionHistory({ items }) {
       </thead>
       <tbody>
         {items.map(el => (
-          <tr key={el.id} style={{ textAlign: 'center', fontSize: '18px' }}>
-            <td style={{ padding: '10px' }}>{el.type}</td>
-            <td style={{ padding: '10px' }}>{el.amount}</td>
-            <td style={{ padding: '10px' }}>{el.currency}</td>
-          </tr>
+          <Tr key={el.id}>
+            <Td>{el.type}</Td>
+            <Td>{el.amount}</Td>
+            <Td>{el.currency}</Td>
+          </Tr>
         ))}
       </tbody>
     </BoxTable>
@@ -32,7 +32,7 @@ TransactionHistory.propTypes = {
       amount: PropTypes.string.isRequired,
       currency: PropTypes.string.isRequired,
     })
-  ),
+  ).isRequired,
 };
 
 export default TransactionHistory;
